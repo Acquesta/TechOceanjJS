@@ -1,0 +1,240 @@
+:root {
+    --color-light: #ffffff;
+    --color-darkBlue: #031c36;
+    --color-medioBlue: #0a3e75;
+    --color-blue: #3357e7d6;
+    --color-black: #191919;
+    --color-roxo: #442fbb;
+    --transition: .4s;
+    --font-body: "Inter", sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-body);
+    transition: var(--transition);
+}
+
+.sideBar{
+    background-color: var(--color-darkBlue);
+    color: var(--color-light);
+    padding: 20px;
+    width: 100%;
+}
+
+.sideBar__top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sideBar__top i{
+    cursor: pointer;
+}
+
+.infos{
+    display: none;
+}
+
+.active{
+    display: block;
+}
+
+.sideBar__usuario{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 1rem .5rem;
+}
+
+.perfil__img{
+    width: 30vw;
+    height: 30vw;
+    background-image: url('../images/perfil.png');
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.sideBar__topicos{
+    width: 100%;
+    height: 20vh;
+    margin: 1rem .5rem;
+    color: #ffffffc4;
+}
+
+.topicos__itens{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.item{
+    display: flex;
+    align-items: center;
+}
+
+.item i{
+    width: 40px;
+    text-align: center;
+}
+
+.dashboard{
+    background-color: var(--color-medioBlue);
+    padding: 1rem;
+}
+
+.dashboard__top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard__pesquisa{
+    width: 50vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 1rem;
+    color: var(--color-light);
+    border: 1px solid var(--color-light);
+    border-radius: 10px;
+}
+
+.dashboard__icons{
+    width: 20vw;
+    display: flex;
+    justify-content: space-between;
+    color: var(--color-light);
+}
+
+.dashboard__sub-top{
+    margin-top: 1rem;
+}
+
+.sub-top__title{
+    color: var(--color-light);
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-top__title h3{
+    color: #299e39;
+}
+
+.dashboard__sub-top button{
+    width: 60vw;
+    background-color: var(--color-roxo);
+    color:var(--color-light) ;
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem 0 ;
+    padding: .5rem .7rem;
+    border: none;
+    border-radius: 3px;
+}
+
+.status{
+    color: var(--color-light);
+}
+
+.status__item{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color-blue);
+    margin: 1rem 0;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+}
+
+.status__infos{
+    width: 60vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.grafico{
+    width: 20vw;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.grafico img{
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+
+    body{
+        display: flex;
+    }
+
+    .sideBar{
+        width: 30vw;
+        height: 100vh;
+    }
+
+    .sideBar__top i {
+        display: none;
+    }
+    
+    .infos{
+        display: block;
+    }
+
+    .perfil__img{
+        width: 20vw;
+        height: 20vw;
+    }
+
+    .dashboard{
+        width: 100%;
+    }
+
+    .dashboard__pesquisa{
+        width: 30vw;
+    }
+
+    .dashboard__icons{
+        width: 10VW;
+    }
+
+    .dashboard__sub-top{
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
+    .dashboard__sub-top button{
+        width: 30vw;
+        margin: 0;
+        align-items: center;
+    }
+}
+
+@media (min-width: 1024px){
+    .perfil__img{
+        width: 10vw;
+        height: 10vw;
+    }
+
+    .dashboard__pesquisa{
+        width: 10vw;
+    }
+
+    .dashboard__sub-top button{
+        width: 10vw;
+    }
+}
